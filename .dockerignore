@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+
+# Data files
+*.csv
+*.xlsx
+*.xls
+*.json
+*.parquet
+
+# Git
+.git/
+.gitignore
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Streamlit
+.streamlit/
+
+# Ollama / models
+.ollama/
+*.gguf
+
+# Logs
+*.log

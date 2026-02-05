@@ -4,6 +4,21 @@ from analyst.profiler import suggest_prompts
 from analyst.translator import prompt_to_code
 from analyst.executor import run_code
 from analyst.llm import ask_llm
+import os
+
+ENABLE_LLM = os.getenv("ENABLE_LLM", "false").lower() == "true"
+
+use_llm = False
+
+if ENABLE_LLM:
+    use_llm = st.sidebar.checkbox(
+        "Use local LLM (Ollama)",
+        value=False
+    )
+else:
+    st.sidebar.info("LLM features are disabled in production.")
+
+
 
 st.set_page_config(page_title="Personal AI Data Analyst", layout="wide")
 st.title("🧠 Personal AI Data Analyst")
