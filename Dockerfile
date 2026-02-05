@@ -21,5 +21,4 @@ ENV STREAMLIT_SERVER_ADDRESS=0.0.0.0
 ENV STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
 ENV ENABLE_LLM=false
 
-CMD ["python", "-m", "streamlit", "run", "app.py", "--server.port=$PORT", "--server.address=0.0.0.0"]
-
+CMD streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
